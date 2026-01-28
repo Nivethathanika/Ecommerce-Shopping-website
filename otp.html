@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Verify OTP</title>
+<style>
+body { font-family: Arial; background:#f5f5f5; }
+.box {
+  max-width:380px;
+  margin:90px auto;
+  background:#fff;
+  padding:25px;
+  border-radius:10px;
+  text-align:center;
+}
+input {
+  width:100%;
+  padding:14px;
+  font-size:20px;
+  text-align:center;
+  letter-spacing:5px;
+}
+button {
+  width:100%;
+  padding:12px;
+  background:#ffd814;
+  border:none;
+  font-weight:bold;
+  border-radius:25px;
+}
+.error { color:red; }
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Verify OTP</h2>
+  <input type="text" id="otpInput" placeholder="Enter OTP" maxlength="6">
+  <p id="msg" class="error"></p>
+  <button onclick="verifyOTP()">Verify & Pay</button>
+</div>
+
+<script>
+function verifyOTP() {
+  let enteredOTP = document.getElementById("otpInput").value;
+  let realOTP = localStorage.getItem("generatedOTP");
+
+  if (enteredOTP === realOTP) {
+    window.location.href = "success.html";
+  } else {
+    document.getElementById("msg").innerText = "Invalid OTP. Please try again.";
+  }
+}
+</script>
+
+</body>
+</html>

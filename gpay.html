@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Google Pay</title>
+<style>
+body { font-family: Arial; background:#f5f5f5; }
+.box {
+  max-width:400px;
+  margin:70px auto;
+  background:#fff;
+  padding:25px;
+  border-radius:10px;
+}
+input, button {
+  width:100%;
+  padding:12px;
+  margin-top:12px;
+}
+button {
+  background:#ffd814;
+  border:none;
+  font-weight:bold;
+  border-radius:25px;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Google Pay / UPI</h2>
+
+  <input type="text" id="upi" placeholder="UPI ID (example@upi)" required>
+  <input type="tel" id="mobile" placeholder="Mobile Number" required>
+
+  <button onclick="sendOTP()">Send OTP</button>
+</div>
+
+<script>
+function sendOTP() {
+  let otp = Math.floor(100000 + Math.random() * 900000);
+  localStorage.setItem("generatedOTP", otp);
+  alert("Demo OTP: " + otp); // remove in real app
+  window.location.href = "otp.html";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Location</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.heading{
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+
+.location-section{
+    padding: 50px;
+}
+
+
+
+.location-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+
+
+.location-box{
+    width: 50%;
+}
+
+.location-box p{
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+@media(max-width:768px){
+    .location-container{
+        flex-direction: column;
+    }
+
+    .location-box,
+    .branches-box{
+        width: 100%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="location-section">
+
+<h2 class="heading">Our Location</h2>
+
+<div class="location-container">
+
+   
+
+    <div class="location-box">
+        <p>
+            Evolve Solutions,<br>
+            Ekkatuthangal,<br>
+            Chennai – 600032
+        </p>
+
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.876588834!2d80.1984!3d13.0153"
+            width="100%" 
+            height="250" 
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </div>
+
+   
+
+</div>
+
+</section>
+
+</body>
+</html>
